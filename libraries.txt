@@ -1,0 +1,3 @@
+# Wokwi library list (SPI, SD and Preferences are built in)
+Adafruit GFX Library
+Adafruit BusIO

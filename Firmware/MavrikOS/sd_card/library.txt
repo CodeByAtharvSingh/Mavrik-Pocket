@@ -1,0 +1,10 @@
+# Mavrik music library: Title|Artist|m:ss|file
+# Put the WAV files in /music on the SD card.
+Night Drive|Neon Coast|3:41|/music/1.wav
+Folded Paper|The Quiet Hours|2:58|/music/2.wav
+Morning Static|Lowlight|4:05|/music/3.wav
+Slow Orbit|Aster Lane|3:27|/music/4.wav
+Saffron Sky|Pink City Sound|3:52|/music/5.wav
+Glass Garden|Juniper Field|4:18|/music/6.wav
+Back Again Tomorrow|Bright Signal|2:46|/music/7.wav
+Ocean of Small Things|Mira Vale|5:02|/music/8.wav

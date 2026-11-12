@@ -1,0 +1,1 @@
+Copy your music here as 16-bit PCM WAV files named 1.wav, 2.wav, 3.wav ... to match library.txt.

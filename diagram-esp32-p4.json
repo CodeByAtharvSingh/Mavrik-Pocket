@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "author": "Mavrik",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-p4-preview",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {
+        "chipRevision": "1.0"
+      }
+    },
+    {
+      "type": "wokwi-ili9341",
+      "id": "lcd",
+      "top": -40,
+      "left": 220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ky-040",
+      "id": "wheel",
+      "top": 330,
+      "left": 240,
+      "rotate": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnSelect",
+      "top": 330,
+      "left": 420,
+      "attrs": {
+        "color": "white",
+        "label": "Select (Enter)",
+        "key": "Enter",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnAction",
+      "top": 420,
+      "left": 230,
+      "attrs": {
+        "color": "orange",
+        "label": "Action (R)",
+        "key": "r",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnBack",
+      "top": 420,
+      "left": 330,
+      "attrs": {
+        "color": "black",
+        "label": "Back (B)",
+        "key": "b",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnUp",
+      "top": 420,
+      "left": 430,
+      "attrs": {
+        "color": "grey",
+        "label": "Up (Arrow)",
+        "key": "ArrowUp",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnDown",
+      "top": 500,
+      "left": 430,
+      "attrs": {
+        "color": "grey",
+        "label": "Down (Arrow)",
+        "key": "ArrowDown",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-microsd-card",
+      "id": "sd",
+      "top": 520,
+      "left": 60,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz",
+      "top": 500,
+      "left": 300,
+      "attrs": {
+        "volume": "0.15"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "lcd:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "lcd:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "lcd:CS",
+      "esp:10",
+      "orange",
+      []
+    ],
+    [
+      "lcd:D/C",
+      "esp:9",
+      "violet",
+      []
+    ],
+    [
+      "lcd:MOSI",
+      "esp:11",
+      "blue",
+      []
+    ],
+    [
+      "lcd:SCK",
+      "esp:12",
+      "green",
+      []
+    ],
+    [
+      "lcd:MISO",
+      "esp:13",
+      "gold",
+      []
+    ],
+    [
+      "lcd:LED",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "lcd:RST",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "sd:CS",
+      "esp:8",
+      "orange",
+      []
+    ],
+    [
+      "sd:DI",
+      "esp:11",
+      "blue",
+      []
+    ],
+    [
+      "sd:DO",
+      "esp:13",
+      "gold",
+      []
+    ],
+    [
+      "sd:SCK",
+      "esp:12",
+      "green",
+      []
+    ],
+    [
+      "sd:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "sd:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "wheel:CLK",
+      "esp:4",
+      "cyan",
+      []
+    ],
+    [
+      "wheel:DT",
+      "esp:5",
+      "magenta",
+      []
+    ],
+    [
+      "wheel:SW",
+      "esp:6",
+      "white",
+      []
+    ],
+    [
+      "wheel:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "wheel:GND",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "btnSelect:1.l",
+      "esp:6",
+      "white",
+      []
+    ],
+    [
+      "btnSelect:2.l",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "btnAction:1.l",
+      "esp:7",
+      "orange",
+      []
+    ],
+    [
+      "btnAction:2.l",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "btnBack:1.l",
+      "esp:1",
+      "grey",
+      []
+    ],
+    [
+      "btnBack:2.l",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "btnUp:1.l",
+      "esp:2",
+      "grey",
+      []
+    ],
+    [
+      "btnUp:2.l",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "btnDown:1.l",
+      "esp:42",
+      "grey",
+      []
+    ],
+    [
+      "btnDown:2.l",
+      "esp:GND.3",
+      "black",
+      []
+    ],
+    [
+      "bz:2",
+      "esp:41",
+      "red",
+      []
+    ],
+    [
+      "bz:1",
+      "esp:GND.3",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
